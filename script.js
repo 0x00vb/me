@@ -57,9 +57,16 @@ function initIntersectionObserver() {
   };
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+    entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('reveal-visible');
+        // Add a slight delay for projects to create a staggered effect
+        if (entry.target.classList.contains('project')) {
+          setTimeout(() => {
+            entry.target.classList.add('reveal-visible');
+          }, index * 100);
+        } else {
+          entry.target.classList.add('reveal-visible');
+        }
         observer.unobserve(entry.target);
       }
     });
@@ -68,6 +75,31 @@ function initIntersectionObserver() {
   // Observe all elements with the 'reveal' class
   document.querySelectorAll('.reveal').forEach((el) => {
     observer.observe(el);
+  });
+}
+
+// Projects-specific intersection observer
+function initProjectsObserver() {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const projectObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Add a slight delay for projects to create a staggered effect
+        setTimeout(() => {
+          entry.target.classList.add('reveal-visible');
+        }, index * 100);
+        projectObserver.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all project elements
+  document.querySelectorAll('.project').forEach((el) => {
+    projectObserver.observe(el);
   });
 }
 
@@ -198,7 +230,18 @@ function initSmoothScrolling() {
 // Projects Initialization
 function initProjects() {
   const projectsGrid = document.getElementById('projects-grid');
-  if (!projectsGrid) return;
+  if (!projectsGrid) {
+    console.error('Projects grid not found');
+    return;
+  }
+
+  // Check if projectsData exists
+  if (typeof projectsData === 'undefined' || !projectsData || projectsData.length === 0) {
+    console.error('Projects data not found or empty');
+    return;
+  }
+
+  console.log('Initializing projects with', projectsData.length, 'projects');
 
   // Clear existing content
   projectsGrid.innerHTML = '';
@@ -208,12 +251,18 @@ function initProjects() {
     const projectElement = createProjectElement(project, index);
     projectsGrid.appendChild(projectElement);
   });
+
+  console.log('Projects created, initializing observer');
+
+  // Re-initialize intersection observer for new projects
+  initProjectsObserver();
 }
 
 // Create individual project element
 function createProjectElement(project, index) {
   const article = document.createElement('article');
-  article.className = `project reveal${project.reverse ? ' project-reverse' : ''}`;
+  const slideDirection = index % 2 === 0 ? 'slide-left' : 'slide-right';
+  article.className = `project reveal ${slideDirection}${project.reverse ? ' project-reverse' : ''}`;
 
   const imageDiv = document.createElement('div');
   imageDiv.className = 'project-image';
