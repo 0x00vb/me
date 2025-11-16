@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentino Balatti — Senior Software Engineer</title>
+    <meta name="description" content="Engineering clear, scalable, intelligent systems. Portfolio of Valentino Balatti, senior software engineer specializing in full-stack development and system architecture." />
+    <meta name="author" content="Valentino Balatti" />
+
+    <meta property="og:title" content="Valentino Balatti — Senior Software Engineer" />
+    <meta property="og:description" content="Engineering clear, scalable, intelligent systems." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Valentino Balatti — Senior Software Engineer" />
+    <meta name="twitter:description" content="Engineering clear, scalable, intelligent systems." />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="app min-h-screen bg-background">
+      <!-- Header -->
+      <header class="header">
+        <div class="container">
+          <div class="header-content">
+            <a href="#" class="logo">VB</a>
+            <nav class="nav">
+              <a href="#projects" class="nav-link">Work</a>
+              <a href="#about" class="nav-link">About</a>
+              <a href="#contact" class="nav-link">Contact</a>
+              <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="floating-shapes">
+          <!-- Large circle -->
+          <div class="shape shape-1"></div>
+
+          <!-- Medium circle -->
+          <div class="shape shape-2"></div>
+
+          <!-- Small accent circle -->
+          <div class="shape shape-3"></div>
+
+          <!-- Geometric squares -->
+          <div class="shape shape-4"></div>
+          <div class="shape shape-5"></div>
+
+          <!-- Gradient orbs -->
+          <div class="shape shape-6"></div>
+          <div class="shape shape-7"></div>
+        </div>
+
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
+
+        <div class="hero-container">
+          <div class="hero-content reveal">
+            <h1 class="hero-title">
+              Valentino Balatti
+              <span class="typing-container">
+                <span class="typing-text" id="typing-text"></span>
+                <span class="typing-cursor">|</span>
+              </span>
+            </h1>
+            <p class="hero-subtitle">Engineering clear, scalable, intelligent systems.</p>
+            <p class="hero-description">
+              I design and build high-performance applications with a focus on clean architecture,
+              thoughtful UX, and deeply reliable engineering.
+            </p>
+            <a href="#projects" class="hero-cta">
+              View My Work
+              <span class="arrow">↓</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2 class="section-title reveal">Selected Work</h2>
+
+          <div id="projects-grid" class="projects-grid">
+            <!-- Projects will be dynamically generated here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="about-content reveal">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-text">
+              <p>
+                I'm a senior software engineer with a deep focus on system architecture, scalable
+                infrastructure, and thoughtful user experiences. My work centers on building reliable,
+                maintainable systems that solve real problems elegantly.
+              </p>
+              <p>
+                With expertise spanning full-stack development, distributed systems, and machine learning,
+                I approach engineering challenges from multiple angles. I believe the best solutions emerge
+                from understanding both the technical constraints and the human needs at the core of every project.
+              </p>
+              <p>
+                Beyond code, I'm deeply curious about AI, cybersecurity, and the fundamental principles
+                that govern complex systems — from software to physics. This multidisciplinary perspective
+                informs how I think about architecture, design, and problem-solving.
+              </p>
+              <p class="about-highlight">
+                Currently exploring opportunities to build impactful products with exceptional teams.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="contact-content reveal">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-subtitle">
+              I'm always open to discussing new opportunities, interesting projects,
+              or ways we might collaborate.
+            </p>
+            <div class="contact-links">
+              <a href="mailto:valentino@example.com" class="contact-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Email</span>
+              </a>
+              <a href="https://github.com/valentino" target="_blank" rel="noopener noreferrer" class="contact-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com/in/valentino" target="_blank" rel="noopener noreferrer" class="contact-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <p>© 2025 Valentino Balatti</p>
+            <div class="footer-links">
+              <a href="https://github.com/valentino" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://linkedin.com/in/valentino" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="projects-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
