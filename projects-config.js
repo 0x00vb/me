@@ -7,7 +7,7 @@ const projectsData = [
     id: 1,
     title: "MindDrive",
     description: "AI-powered note-taking web application designed to help users capture, organize, and retrieve their thoughts efficiently with intelligent search and categorization.",
-    image: "/public/minddrive.webp",
+    image: "./public/minddrive.webp",
     imageAlt: "Screenshot of MindDrive - AI-powered note-taking web application",
     tags: ["Vite", "ExpressJS", "PostgreSQL", "Tailwind CSS", "AI/ML"],
     links: {
@@ -20,7 +20,7 @@ const projectsData = [
     id: 2,
     title: "CMflow",
     description: "Automated content marketing tool that lets you manage multiple business accounts, describe each brand, and generate AI-powered posts. You can schedule posts with custom intervals or create and publish them manually.",
-    image: "/public/cmflow.webp",
+    image: "./public/cmflow.webp",
     imageAlt: "Screenshot of CMflow - automated content marketing tool",
     tags: ["Next.js", "Tailwind CSS", "TypeScript", "PostgreSQL"],
     links: {
@@ -33,7 +33,7 @@ const projectsData = [
     id: 3,
     title: "Ski Rental Pro",
     description: "Comprehensive ski rental management system with client management, inventory tracking, and seamless rental processing for ski shops.",
-    image: "/public/skirental.webp",
+    image: "./public/skirental.webp",
     imageAlt: "Screenshot of Ski Rental Pro - ski rental management system",
     tags: ["Java", "Desktop App", "Next.js", "React", "Tailwind CSS"],
     links: {
@@ -46,7 +46,7 @@ const projectsData = [
     id: 4,
     title: "E-commerce Platform",
     description: "Full-featured e-commerce solution with advanced product filtering, wishlist functionality, and optimized checkout experience.",
-    image: "/public/ecommerce.webp",
+    image: "./public/ecommerce.webp",
     imageAlt: "Screenshot of E-commerce Platform",
     tags: ["React", "Node.js", "MongoDB", "ExpressJS", "Stripe"],
     links: {
@@ -59,7 +59,7 @@ const projectsData = [
     id: 5,
     title: "NewsTok",
     description: "Revolutionary news consumption app with TikTok-style swipeable interface, bringing engaging news discovery to mobile users.",
-    image: "/public/newstok.webp",
+    image: "./public/newstok.webp",
     imageAlt: "Screenshot of NewsTok - news consumption app",
     tags: ["Next.js", "Vite", "ExpressJS", "News API"],
     links: {
@@ -72,7 +72,7 @@ const projectsData = [
     id: 6,
     title: "DreamCanvas",
     description: "Immersive wallpaper application that transforms devices into personalized canvases with AI-generated and curated artwork.",
-    image: "/public/dreamcanvas.webp",
+    image: "./public/dreamcanvas.webp",
     imageAlt: "Screenshot of DreamCanvas - wallpaper application",
     tags: ["React Native", "Mobile Development", "AI Art"],
     links: {
